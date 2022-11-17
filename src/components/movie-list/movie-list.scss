@@ -1,0 +1,40 @@
+@use '../../scss/' as *;
+
+.movie-list {
+    position: relative;
+
+    .swiper-slide {
+        width: 15%;
+
+        @include tablet {
+            width: 30%;
+        }
+        @include mobile {
+            width: 40%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        background-color: $body-bg;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        top: 50px;
+        border: 2px solid $txt-color;
+
+        &::after {
+            color: $txt-color;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+
+    .swiper-button-disabled {
+        display: none;
+    }
+}

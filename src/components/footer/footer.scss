@@ -1,0 +1,25 @@
+@use '../../scss/' as *;
+
+.footer {
+    position: relative;
+    padding: 2rem 2rem;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 2rem;
+
+    @include mobile {
+        margin-bottom: 60px;
+    }
+
+    &__content {
+
+        &__logo {
+            @include flex(center, center);
+            .logo {
+                font-size: 30px;
+            }
+            
+        }
+    }
+}
